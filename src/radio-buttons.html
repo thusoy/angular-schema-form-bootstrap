@@ -4,7 +4,7 @@
     <label class="control-label {{form.labelHtmlClass}}" ng-show="showTitle()">{{form.title}}</label>
   </div>
   <div class="btn-group">
-    <label sf-field-model="replaceAll" class="btn {{ (item.value === $$value$$) ? form.style.selected || 'btn-default' : form.style.unselected || 'btn-default'; }}"
+    <label class="btn {{ (item.value === $$value$$) ? form.style.selected || 'btn-default' : form.style.unselected || 'btn-default'; }}"
            ng-class="{ active: item.value === $$value$$ }"
            ng-repeat="item in form.titleMap">
       <input type="radio"
@@ -12,7 +12,8 @@
              sf-changed="form"
              style="display: none;"
              ng-disabled="form.readonly"
-             sf-field-model
+             ng-model="$$value$$"
+             ng-model-options="form.ngModelOptions"
              schema-validate="form"
              ng-value="item.value"
              name="{{form.key.join('.')}}">

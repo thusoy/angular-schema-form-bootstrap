@@ -6,7 +6,8 @@
              class="{{form.fieldHtmlClass}}"
              sf-changed="form"
              ng-disabled="form.readonly"
-             sf-field-model
+             ng-model="$$value$$"
+             ng-model-options="form.ngModelOptions"
              schema-validate="form"
              ng-value="item.value"
              name="{{form.key.join('.')}}">
