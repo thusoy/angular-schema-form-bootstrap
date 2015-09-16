@@ -23,10 +23,10 @@ gulp.task('minify', function() {
   stream.queue(gulp.src('./src/**/*.js'));
 
   stream.done()
-  .pipe(concat('bootstrap-decorator.js'))
+  .pipe(concat('bootstrap-sections-decorator.js'))
   .pipe(gulp.dest('./'))
   .pipe(uglify())
-  .pipe(rename('bootstrap-decorator.min.js'))
+  .pipe(rename('bootstrap-sections-decorator.min.js'))
   .pipe(gulp.dest('./'));
 
 });

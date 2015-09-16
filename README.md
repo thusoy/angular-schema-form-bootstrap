@@ -1,5 +1,5 @@
-Angular Bootstrap Decorator
-==========================
+Angular Bootstrap Sections Decorator
+====================================
 
 For https://github.com/Textalk/angular-schema-form
 

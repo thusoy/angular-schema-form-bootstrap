@@ -1,10 +1,10 @@
 {
-  "name": "angular-schema-form-bootstrap",
+  "name": "angular-schema-form-bootstrap-sections",
   "authors": [
     "David Jensen (Textalk) <david.lgj@gmail.com>"
   ],
   "description": "Bootstrap 3 decorator for Angular Schema Form",
-  "main": "bootstrap-decorator.min.js",
+  "main": "bootstrap-sections-decorator.min.js",
   "keywords": [
     "angular-schema-form-decorator"
   ],
