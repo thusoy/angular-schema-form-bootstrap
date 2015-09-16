@@ -1,6 +1,27 @@
 <div class="form-group schema-form-{{form.type}} {{form.htmlClass}}"
      ng-class="{'has-error': form.disableErrorState !== true && hasError(), 'has-success': form.disableSuccessState !== true && hasSuccess(), 'has-feedback': form.feedback !== false }">
-  <label class="control-label {{form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{form.key.slice(-1)[0]}}">{{form.title}}</label>
+  <label class="control-label {{form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{form.key.slice(-1)[0]}}">{{form.title}}
+    <em class="pull-right" ng-show="form.showFieldEditor">
+      <div class="btn-group" role="group" aria-label="buildertools">
+        <button type="button" class="btn btn-default" ng-show="!form.showDown(form.forField) && form.showUp(form.forField)" disabled>a</button>
+        <button type="button" class="btn btn-default" ng-click="form.moveUp(form.forField)" ng-disabled="!form.showUp(form.forField)"><i class="fa fa-arrow-up"></i></button>
+
+        <button type="button" class="btn btn-default"  ng-hide="!form.showDown(form.forField) && form.showUp(form.forField)" ng-click="form.moveDown(form.forField)" ng-disabled="!form.showDown(form.forField)"><i class="fa fa-arrow-down"></i></button>
+
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <translate>Action</translate>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="" ng-click="form.editField(form.forField)"><i class="fa fa-pencil"></i> <translate>Edit</translate></a></li>
+            <li><a href=""  ng-click="form.removeField(form.forField)"><i class="fa fa-trash"></i> <translate>Delete</translate></a></li>
+          </ul>
+        </div>
+      </div>
+    </em>
+
+  </label>
 
   <input ng-if="!form.fieldAddonLeft && !form.fieldAddonRight"
          ng-show="form.key"
