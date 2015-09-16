@@ -8,7 +8,7 @@
   }
 }(this, function(schemaForm) {
 angular.module('schemaForm').config(['schemaFormDecoratorsProvider', function(decoratorsProvider) {
-  var base = 'directives/decorators/bootstrap/';
+  var base = 'decorators/bootstrap/';
 
   decoratorsProvider.defineDecorator('bootstrapDecorator', {
     textarea: {template: base + 'textarea.html', replace: false},
