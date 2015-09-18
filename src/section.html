@@ -1,3 +1,38 @@
 <div class="schema-form-section {{form.htmlClass}}">
+  <h3>{{form.section}}
+    <button type="button" class="btn btn-default">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <span class="sr-only">Edit</span>
+        <a href="http://vitalets.github.io/angular-xeditable/">Fix me</a>
+    </button>
+    <div class="pull-right btn-group" role="group" aria-label="buildertools">
+      <button type="button" class="btn btn-default"><i class="fa fa-arrow-up"></i></button>
+      <button type="button" class="btn btn-default"><i class="fa fa-arrow-down"></i></button>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <translate>Section actions</translate>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <a ng-if="form.isSingleColumn()">
+                    <i class="fa fa-chain-broken"></i>
+                    <translate>Divide in two columns</translate>
+                </a>
+                <a ng-if="!form.isSingleColumn()">
+                    <i class="fa fa-chain"></i>
+                    <translate>Join to one column</translate>
+                </a>
+            </li>
+            <li>
+                <a ng-click="form.remove()">
+                    <i class="fa fa-trash"></i>
+                    <translate>Delete section</translate>
+                </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </h3>
   <sf-decorator ng-repeat="item in form.items" form="item"></sf-decorator>
 </div>
