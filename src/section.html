@@ -6,22 +6,16 @@
         <a href="http://vitalets.github.io/angular-xeditable/">Fix me</a>
     </button>
     <div class="pull-right btn-group" role="group" aria-label="buildertools">
-      <button type="button" class="btn btn-default"><i class="fa fa-arrow-up"></i></button>
-      <button type="button" class="btn btn-default"><i class="fa fa-arrow-down"></i></button>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <translate>Section actions</translate>
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li>
-                <a ng-click="form.remove()">
-                    <i class="fa fa-trash"></i>
-                    <translate>Delete section</translate>
-                </a>
-            </li>
-        </ul>
-      </div>
+      <button type="button" class="btn btn-default" ng-hide="!form.showUp()" ng-click="form.moveUp()" ng-disabled="!form.showUp()">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+      <button type="button" class="btn btn-default" ng-hide="!form.showDown()" ng-click="form.moveDown()" ng-disabled="!form.showDown()">
+        <i class="fa fa-arrow-down"></i>
+      </button>
+      <button type="button" class="btn btn-default" ng-click="form.remove()">
+        <i class="fa fa-trash"></i>
+        <translate>&nbsp;Delete</translate>
+      </button>
     </div>
   </h3>
   <sf-decorator ng-repeat="item in form.items" form="item"></sf-decorator>
