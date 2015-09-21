@@ -6,7 +6,7 @@
         <button type="button" class="btn btn-default" ng-show="!form.showDown() && form.showUp()" disabled>a</button>
         <button type="button" class="btn btn-default" ng-click="form.moveUp()" ng-disabled="!form.showUp()"><i class="fa fa-arrow-up"></i></button>
 
-        <button type="button" class="btn btn-default"  ng-hide="!form.showDown() && form.showUp(form.forField)" ng-click="form.moveDown()" ng-disabled="!form.showDown()"><i class="fa fa-arrow-down"></i></button>
+        <button type="button" class="btn btn-default"  ng-hide="!form.showDown() && form.showUp()" ng-click="form.moveDown()" ng-disabled="!form.showDown()"><i class="fa fa-arrow-down"></i></button>
 
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -14,7 +14,7 @@
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="" ng-click="form.editField(form.forField)"><i class="fa fa-pencil"></i> <translate>Edit</translate></a></li>
+            <li><a href="" ng-click="form.editField()"><i class="fa fa-pencil"></i> <translate>Edit</translate></a></li>
             <li><a href=""  ng-click="form.remove()"><i class="fa fa-trash"></i> <translate>Delete</translate></a></li>
           </ul>
         </div>
