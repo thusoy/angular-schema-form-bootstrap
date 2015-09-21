@@ -15,16 +15,6 @@
         </button>
         <ul class="dropdown-menu" role="menu">
             <li>
-                <a ng-if="form.isSingleColumn()">
-                    <i class="fa fa-chain-broken"></i>
-                    <translate>Divide in two columns</translate>
-                </a>
-                <a ng-if="!form.isSingleColumn()">
-                    <i class="fa fa-chain"></i>
-                    <translate>Join to one column</translate>
-                </a>
-            </li>
-            <li>
                 <a ng-click="form.remove()">
                     <i class="fa fa-trash"></i>
                     <translate>Delete section</translate>
